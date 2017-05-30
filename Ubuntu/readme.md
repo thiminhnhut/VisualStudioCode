@@ -10,6 +10,8 @@
 
 2. [PlatformIO](https://marketplace.visualstudio.com/items?itemName=formulahendry.platformio)
 
+3. [PlatformIO User Guide](http://docs.platformio.org/en/stable/userguide/index.html)
+
 ## Cài đặt Visual Studio Code trên Ubuntu
 
 * Tải phiên bản 32 bit hoặc 64 bit dành cho Ubuntu từ địa chỉ: https://code.visualstudio.com/download
