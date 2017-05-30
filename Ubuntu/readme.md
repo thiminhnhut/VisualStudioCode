@@ -37,7 +37,7 @@ với vi điều khiển:
 	
 			/etc/udev/rules.d/99-platformio-udev.rules
 			
-	hoặc
+		hoặc
 			
 			/lib/udev/rules.d/99-platformio-udev.rules
 			
@@ -53,7 +53,7 @@ với vi điều khiển:
 	
 			sudo service udev restart
 			
-	hoặc:
+		hoặc:
 			
 			sudo udevadm control --reload-rules
 			
@@ -75,7 +75,7 @@ với vi điều khiển:
 		
 				sudo python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 				
-		hoặc:
+			hoặc:
 			
 				sudo python get-platformio.py
 				
