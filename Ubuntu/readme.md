@@ -18,6 +18,10 @@
 
 * Tải về tiến hành cài đặt bình thường trên hệ điều hành Ubuntu (file .deb).
 
+## Cài đặt nhanh các thư viện trong Visual Studio Code
+
+* Sử dụng phím tắt: `Ctrl + P` và gõ lệnh `ext install tên_thư_viện`.
+
 ## Sử dụng Visual Studio Code để lập trình cho vi điều khiển
 
 ### Cài đặt PlatformIO Core
