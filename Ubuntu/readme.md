@@ -107,7 +107,7 @@ với vi điều khiển:
 		
 	Thay `uno` bằng `ID` của board tương ứng được mô tả trong [Embedded Boards](http://docs.platformio.org/en/stable/platforms/embedded_boards.html).
 
-### Sử dụng PlatformIO để buil và upload code cho vi điều khiển
+### Sử dụng PlatformIO để build và upload code cho vi điều khiển
 
 * Sử dụng giao diện
 
