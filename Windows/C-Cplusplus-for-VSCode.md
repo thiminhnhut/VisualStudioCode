@@ -22,9 +22,9 @@
 
 * Cài đặt các package sau:
 
-    + `mingw32-gcc-g++` (The GNU C++ Compiler).
-
-    + `mingw32-gdb` (The GNU Source-Level Debugger).
+  * `mingw32-gcc-g++` (The GNU C++ Compiler).
+  
+  * `mingw32-gdb` (The GNU Source-Level Debugger).
 
 * Cài đặt biến môi trường: `Path` với đường dẫn sau: `C:\MinGW; C:\MinGW\bin`.
 
@@ -52,109 +52,109 @@
 
 * Để compiler và debugger trên Visual Studio Code, thực hiện các cấu hình sau:
 
-    + Nếu compiler source `C++` thì làm theo các bước bên dưới.
+  * Nếu compiler source `C++` thì làm theo các bước bên dưới.
 
-    + Nếu compiler source `C` thì xóa các dòng trong `"includePath"` có chứa `c++`.
+  * Nếu compiler source `C` thì xóa các dòng trong `"includePath"` có chứa `c++`.
 
-    + `Ctrl-Shift-P: C/Cpp: Edit Configurations...`: mở file `c_cpp_properties.json`, thay đổi nội dung như sau (ở đây đang sử dụng `MinGW32-6.3.0`):
+  * `Ctrl-Shift-P: C/Cpp: Edit Configurations...`: mở file `c_cpp_properties.json`, thay đổi nội dung như sau (ở đây đang sử dụng `MinGW32-6.3.0`):
+
+        {
+            "configurations": [
+                {
+                    "name": "Win32",
+                    "intelliSenseMode": "clang-x64",
+                    "includePath": [
+                        "${workspaceRoot}",
+                        "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
+                        "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
+                        "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
+                        "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                        "C:/MinGW/include",
+                        "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+                    ],
+                    "defines": [
+                        "_DEBUG",
+                        "UNICODE",
+                        "__GNUC__=6",
+                        "__cdecl=__attribute__((__cdecl__))"
+                    ],
+                    "browse": {
+                        "path": [
+                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                            "C:/MinGW/include/*"
+                        ],
+                        "limitSymbolsToIncludedHeaders": true,
+                        "databaseFilename": ""
+                    }
+                }
+            ]
+        }
+
+  * `Ctrl-Shift-P: Tasks: Configure Tasks...`: mở file `tasks.json`, chọn `Create tasks.json file from templates`, chọn `Other`.
+
+  * Trong thư mục `.vscode` sẽ tạo ra file `tasks.json`, thay đổi nội dung như sau:
+
+        {
+            // See https://go.microsoft.com/fwlink/?LinkId=733558
+            // for the documentation about the tasks.json format
+            "version": "2.0.0",
+            "tasks": [
+                {
+                    "label": "Build C++", // Label build source
+                    "type": "shell",
+                    "command": "g++",
+                    "args": [
+                        "-g",
+                        "helloworld.cpp" // File source cpp
+                    ],
+                    "group": {
+                        "kind": "build",
+                        "isDefault": true
+                    }
+                }
+            ]
+        }
+
+  * Nhấn `Ctrl-Shift-B` để compiler, nếu compiler thành công sẽ tạo ra file `a.exe`
+
+  * Debugging your code:
+
+    * Nhấn `F5`: chọn `C++ (GDB/LLDB)` để tạo file `launch.json` trong thư mục `.vscode`
+
+    * Thay đổi nội dung file `launch.json` như sau:
 
             {
+                // Use IntelliSense to learn about possible attributes.
+                // Hover to view descriptions of existing attributes.
+                // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+                "version": "0.2.0",
                 "configurations": [
                     {
-                        "name": "Win32",
-                        "intelliSenseMode": "clang-x64",
-                        "includePath": [
-                            "${workspaceRoot}",
-                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
-                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
-                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
-                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
-                            "C:/MinGW/include",
-                            "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+                        "name": "(gdb) Launch",
+                        "type": "cppdbg",
+                        "request": "launch",
+                        "program": "${workspaceRoot}/a.exe",
+                        "args": [],
+                        "stopAtEntry": false,
+                        "cwd": "${workspaceRoot}",
+                        "environment": [],
+                        "externalConsole": true,
+                        "MIMode": "gdb",
+                        "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+                        "setupCommands": [
+                            {
+                                "description": "Enable pretty-printing for gdb",
+                                "text": "-enable-pretty-printing",
+                                "ignoreFailures": true
+                            }
                         ],
-                        "defines": [
-                            "_DEBUG",
-                            "UNICODE",
-                            "__GNUC__=6",
-                            "__cdecl=__attribute__((__cdecl__))"
-                        ],
-                        "browse": {
-                            "path": [
-                                "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
-                                "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-                                "C:/MinGW/include/*"
-                            ],
-                            "limitSymbolsToIncludedHeaders": true,
-                            "databaseFilename": ""
-                        }
+                        "preLaunchTask": "Build C++"
                     }
                 ]
             }
 
-    + `Ctrl-Shift-P: Tasks: Configure Tasks...`: mở file `tasks.json`, chọn `Create tasks.json file from templates`, chọn `Other`.
-
-    + Trong thư mục `.vscode` sẽ tạo ra file `tasks.json`, thay đổi nội dung như sau:
-
-            {
-                // See https://go.microsoft.com/fwlink/?LinkId=733558
-                // for the documentation about the tasks.json format
-                "version": "2.0.0",
-                "tasks": [
-                    {
-                        "label": "Build C++", // Label build source
-                        "type": "shell",
-                        "command": "g++",
-                        "args": [
-                            "-g",
-                            "helloworld.cpp" // File source cpp
-                        ],
-                        "group": {
-                            "kind": "build",
-                            "isDefault": true
-                        }
-                    }
-                ]
-            }
-
-    + Nhấn `Ctrl-Shift-B` để compiler, nếu compiler thành công sẽ tạo ra file `a.exe`
-
-    + Debugging your code:
-
-        - Nhấn `F5`: chọn `C++ (GDB/LLDB)` để tạo file `launch.json` trong thư mục `.vscode`
-
-        - Thay đổi nội dung file `launch.json` như sau:
-
-                {
-                    // Use IntelliSense to learn about possible attributes.
-                    // Hover to view descriptions of existing attributes.
-                    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-                    "version": "0.2.0",
-                    "configurations": [
-                        {
-                            "name": "(gdb) Launch",
-                            "type": "cppdbg",
-                            "request": "launch",
-                            "program": "${workspaceRoot}/a.exe",
-                            "args": [],
-                            "stopAtEntry": false,
-                            "cwd": "${workspaceRoot}",
-                            "environment": [],
-                            "externalConsole": true,
-                            "MIMode": "gdb",
-                            "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-                            "setupCommands": [
-                                {
-                                    "description": "Enable pretty-printing for gdb",
-                                    "text": "-enable-pretty-printing",
-                                    "ignoreFailures": true
-                                }
-                            ],
-                            "preLaunchTask": "Build C++"
-                        }
-                    ]
-                }
-
-        - Sử dụng cặp `key-value`: `"preLaunchTask": "Build C++"` thì khi build chỉ cần nhấn `F5` (không cần nhấn `Ctrl-Shift-B`).
+    * Sử dụng cặp `key-value`: `"preLaunchTask": "Build C++"` thì khi build chỉ cần nhấn `F5` (không cần nhấn `Ctrl-Shift-B`).
 
 ### Compiler và Debugger
 
