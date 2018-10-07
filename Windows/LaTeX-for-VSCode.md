@@ -12,12 +12,12 @@
 
 * Cài đặt các package cho VS Code để làm việc với LaTeX:
 
-    + [LaTeX Compiler của mathiasfrohlich](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.latexcompile)
+  * [LaTeX Compiler của mathiasfrohlich](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.latexcompile)
 
-    + [LaTeX language support của Long Nhat Nguyen](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support)
+  * [LaTeX language support của Long Nhat Nguyen](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support)
 
-    + [LaTeX Preview của ajshort](https://marketplace.visualstudio.com/items?itemName=ajshort.latex-preview)
+  * [LaTeX Preview của ajshort](https://marketplace.visualstudio.com/items?itemName=ajshort.latex-preview)
 
-    + [LaTeX Workshop của James Yu](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+  * [LaTeX Workshop của James Yu](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-    + [latex-formatter của Nick Fode](https://marketplace.visualstudio.com/items?itemName=nickfode.latex-formatter)
+  * [latex-formatter của Nick Fode](https://marketplace.visualstudio.com/items?itemName=nickfode.latex-formatter)
