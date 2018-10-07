@@ -17,3 +17,7 @@
   * [Git History Diff của Hui Zhou](https://marketplace.visualstudio.com/items?itemName=huizhou.githd)
   
   * [Git Tags của Howard.Zuo](https://marketplace.visualstudio.com/items?itemName=howardzuo.vscode-git-tags)
+
+  * [GitLens — Git supercharged của Eric Amodio](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+  * [Git Project Manager của Felipe Caputo](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
