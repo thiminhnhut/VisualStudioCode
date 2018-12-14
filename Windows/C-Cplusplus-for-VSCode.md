@@ -161,3 +161,22 @@
 * Compiler: `Ctrl-Shift-B`
 
 * Debugger (and Compiler): `F5`
+
+### Tips for C/C++ with Visual Studio Code
+
+1. Thay đổi format:
+
+        if (a == 1)
+        {
+            b = 0;
+        }
+
+thành format:
+
+        if (a == 1) {
+            b = 0;
+        }
+
+vào `File -> Preferences -> Settings`, tìm option `C_Cpp.clang_format_fallbackStyle`, sửa thành `Visual Studio` thành `LLVM` hoặc `Google`.
+
+* Nguồn tham khảo: [VS Code formatting for “{ }”](https://stackoverflow.com/questions/45823734/vs-code-formatting-for?fbclid=IwAR2wr-YXIx2cS5B3-0FZ4RaWzDCDGwfMZI8uNvCimfFdp2Booe0N9La9CJs)
