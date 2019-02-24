@@ -13,3 +13,5 @@
 1. [LateX for Visual Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Windows/LaTeX-for-VSCode.md)
 
 1. [Kotlin for Visual Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Windows/Kotlin-for-VSCode.md)
+
+1. [Settings for Visual Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Settings.md)
