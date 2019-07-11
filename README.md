@@ -15,3 +15,5 @@
 1. [Kotlin for Visual Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Windows/Kotlin-for-VSCode.md)
 
 1. [Settings for Visual Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Settings.md)
+
+1. [Extension for Visual Studio Code](https://github.com/thiminhnhut/VisualStudioCode/blob/master/Windows/Extension.md)
