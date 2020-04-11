@@ -1,8 +1,8 @@
 # Lập trình C/C++ trên Visual Studio Code
 
-* **Thực hiện:** Thi Minh Nhựt - **Email:** thiminhnhut@gmail.com
+- **Thực hiện:** Thi Minh Nhựt - **Email:** thiminhnhut@gmail.com
 
-* **Thời gian:** Ngày 14 tháng 01 năm 2018
+- **Thời gian:** Ngày 14 tháng 01 năm 2018
 
 ## Nguồn tham khảo
 
@@ -18,45 +18,45 @@
 
 ### Cài đặt MinGW trên Windows
 
-* Tải `MinGW` ở địa chỉ: [Minimalist GNU for Windows](http://www.mingw.org/)
+- Tải `MinGW` ở địa chỉ: [Minimalist GNU for Windows](http://www.mingw.org/)
 
-* Cài đặt các package sau:
+- Cài đặt các package sau:
 
-  * `mingw32-gcc-g++` (The GNU C++ Compiler).
-  
-  * `mingw32-gdb` (The GNU Source-Level Debugger).
+  - `mingw32-gcc-g++` (The GNU C++ Compiler).
 
-* Cài đặt biến môi trường: `Path` với đường dẫn sau: `C:\MinGW; C:\MinGW\bin`.
+  - `mingw32-gdb` (The GNU Source-Level Debugger).
+
+- Cài đặt biến môi trường: `Path` với đường dẫn sau: `C:\MinGW; C:\MinGW\bin`.
 
 ### Cài đặt Clang trên Windows
 
-* Tải `Clang` ở địa chỉ: [Clang](http://clang.llvm.org/)
+- Tải `Clang` ở địa chỉ: [Clang](http://clang.llvm.org/)
 
 ### Cài đặt Visual Studio Code
 
-* Tải `Visual Studio Code` ở địa chỉ: [Download Visual Studio Code](https://code.visualstudio.com/download)
+- Tải `Visual Studio Code` ở địa chỉ: [Download Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Cài đặt Extension cho C/C++ trên Visual Studio Code
 
-* `C/C++ for Visual Studio Code`.
+- `C/C++ for Visual Studio Code`.
 
-* `C/C++ Clang Command Adapter`.
+- `C/C++ Clang Command Adapter`.
 
-* `C/C++ Snippets`.
+- `C/C++ Snippets`.
 
 ### Cấu hình thư mục .vscode
 
-* Sau khi cài extension `C/C++ for Visual Studio Code`, sử dụng `Visual Studio Code` mở thư mục có chưa mã nguồn C/C++, sẽ tự động tạo ra thư mục `.vscode`.
+- Sau khi cài extension `C/C++ for Visual Studio Code`, sử dụng `Visual Studio Code` mở thư mục có chưa mã nguồn C/C++, sẽ tự động tạo ra thư mục `.vscode`.
 
-* Cấu hình để thư mục `.vscode` có 3 file sau: `c_cpp_properties.json`, `tasks.json` và `launch.json`.
+- Cấu hình để thư mục `.vscode` có 3 file sau: `c_cpp_properties.json`, `tasks.json` và `launch.json`.
 
-* Để compiler và debugger trên Visual Studio Code, thực hiện các cấu hình sau:
+- Để compiler và debugger trên Visual Studio Code, thực hiện các cấu hình sau:
 
-  * Nếu compiler source `C++` thì làm theo các bước bên dưới.
+  - Nếu compiler source `C++` thì làm theo các bước bên dưới.
 
-  * Nếu compiler source `C` thì xóa các dòng trong `"includePath"` có chứa `c++`.
+  - Nếu compiler source `C` thì xóa các dòng trong `"includePath"` có chứa `c++`.
 
-  * `Ctrl-Shift-P: C/Cpp: Edit Configurations...`: mở file `c_cpp_properties.json`, thay đổi nội dung như sau (ở đây đang sử dụng `MinGW32-6.3.0`):
+  - `Ctrl-Shift-P: C/Cpp: Edit Configurations...`: mở file `c_cpp_properties.json`, thay đổi nội dung như sau (ở đây đang sử dụng `MinGW32-6.3.0`):
 
         {
             "configurations": [
@@ -91,9 +91,9 @@
             ]
         }
 
-  * `Ctrl-Shift-P: Tasks: Configure Tasks...`: mở file `tasks.json`, chọn `Create tasks.json file from templates`, chọn `Other`.
+  - `Ctrl-Shift-P: Tasks: Configure Tasks...`: mở file `tasks.json`, chọn `Create tasks.json file from templates`, chọn `Other`.
 
-  * Trong thư mục `.vscode` sẽ tạo ra file `tasks.json`, thay đổi nội dung như sau:
+  - Trong thư mục `.vscode` sẽ tạo ra file `tasks.json`, thay đổi nội dung như sau:
 
         {
             // See https://go.microsoft.com/fwlink/?LinkId=733558
@@ -116,13 +116,13 @@
             ]
         }
 
-  * Nhấn `Ctrl-Shift-B` để compiler, nếu compiler thành công sẽ tạo ra file `a.exe`
+  - Nhấn `Ctrl-Shift-B` để compiler, nếu compiler thành công sẽ tạo ra file `a.exe`
 
-  * Debugging your code:
+  - Debugging your code:
 
-    * Nhấn `F5`: chọn `C++ (GDB/LLDB)` để tạo file `launch.json` trong thư mục `.vscode`
+    - Nhấn `F5`: chọn `C++ (GDB/LLDB)` để tạo file `launch.json` trong thư mục `.vscode`
 
-    * Thay đổi nội dung file `launch.json` như sau:
+    - Thay đổi nội dung file `launch.json` như sau:
 
             {
                 // Use IntelliSense to learn about possible attributes.
@@ -154,17 +154,17 @@
                 ]
             }
 
-    * Sử dụng cặp `key-value`: `"preLaunchTask": "Build C++"` thì khi build chỉ cần nhấn `F5` (không cần nhấn `Ctrl-Shift-B`).
+    - Sử dụng cặp `key-value`: `"preLaunchTask": "Build C++"` thì khi build chỉ cần nhấn `F5` (không cần nhấn `Ctrl-Shift-B`).
 
 ### Compiler và Debugger
 
-* Compiler: `Ctrl-Shift-B`
+- Compiler: `Ctrl-Shift-B`
 
-* Debugger (and Compiler): `F5`
+- Debugger (and Compiler): `F5`
 
 ### Tips for C/C++ with Visual Studio Code
 
-1. Thay đổi format:
+1.  Thay đổi format:
 
         if (a == 1)
         {
@@ -179,4 +179,10 @@ thành format:
 
 vào `File -> Preferences -> Settings`, tìm option `C_Cpp.clang_format_fallbackStyle`, sửa thành `Visual Studio` thành `LLVM` hoặc `Google`.
 
-* Nguồn tham khảo: [VS Code formatting for “{ }”](https://stackoverflow.com/questions/45823734/vs-code-formatting-for?fbclid=IwAR2wr-YXIx2cS5B3-0FZ4RaWzDCDGwfMZI8uNvCimfFdp2Booe0N9La9CJs)
+- Nguồn tham khảo: [VS Code formatting for “{ }”](https://stackoverflow.com/questions/45823734/vs-code-formatting-for?fbclid=IwAR2wr-YXIx2cS5B3-0FZ4RaWzDCDGwfMZI8uNvCimfFdp2Booe0N9La9CJs)
+
+1. Show parameters hints of function:
+
+- Shortcut: `Ctrl + Shift + Space`
+
+- Nguồn tham khảo: [How to trigger parameter hints in Visual Studio Code?](https://stackoverflow.com/questions/53731271/how-to-trigger-parameter-hints-in-visual-studio-code)
