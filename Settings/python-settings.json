@@ -1,0 +1,16 @@
+{
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.formatOnSave": true,
+  "explorer.confirmDragAndDrop": true,
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "88"
+  ],
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true
+}
